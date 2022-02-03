@@ -1,18 +1,24 @@
-import { prefix, kebabCase } from '@vue-interface/utils';
-
 export default {
 
     props: {
 
         /**
-         * The size of the form control
+         * The size name.
          *
-         * @property String
+         * @param {String}
          */
-        size: {
+        size: String,
+
+        /**
+         * The size prefix.
+         *
+         * @param {String}
+         */
+        sizePrefix: {
             type: String,
-            default: 'md',
-            validate: value => ['sm', 'md', 'lg'].indexOf(value) !== -1
+            default() {
+                return this.$options.name;
+            }
         }
 
     },
@@ -20,11 +26,15 @@ export default {
     computed: {
 
         sizeableClassPrefix() {
-            return kebabCase(this.$options.name);
+            return this.sizePrefix;
         },
 
         sizeableClass() {
-            return prefix(this.size, this.sizeableClassPrefix);
+            if(!this.size || !this.sizeableClassPrefix) {
+                return '';
+            }
+
+            return `${this.sizeableClassPrefix}-${this.size}`;
         }
 
     }

@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Sizeable</title>
+      <script type="module" crossorigin src="/assets/index.d8adb4e6.js"></script>
+      <link rel="modulepreload" href="/assets/vendor.8005869e.js">
+      <link rel="stylesheet" href="/assets/index.6ab1e98d.css">
     </head>
     <body>
         <div id="app" class="container mx-auto">
@@ -25,36 +28,6 @@
             <txt size="7xl" class="p-3">7xl</txt>
         </div>
 
-        <script type="module">
-            import './index.css';
-            import Vue from 'vue/dist/vue';
-            import { Sizeable } from './index.js';
-            
-            Vue.config.devtools = false;
-            Vue.config.productionTip = false;
-                          
-            const Txt = Vue.extend({
-                props: {
-                    sizePrefix: {
-                        default: 'text'
-                    }
-                },
-                mixins: [
-                    Sizeable
-                ],
-                render(createElement) {
-                    return createElement('div', {
-                        class: this.sizeableClass
-                    }, this.$slots.default);
-                }
-            });
-            
-            const vue = new Vue({
-                el: '#app',
-                components: {
-                    Txt
-                }
-            });
-        </script>
+        
     </body>
 </html>
