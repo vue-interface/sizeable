@@ -3,7 +3,8 @@
   "version": "1.0.3",
   "description": "The sizeable mixin.",
   "files": [
-    "dist"
+    "dist",
+    "tailwindcss"
   ],
   "main": "./dist/sizeable.umd.js",
   "module": "./dist/sizeable.es.js",
