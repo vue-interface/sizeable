@@ -4,7 +4,7 @@ var Sizeable = {
     sizePrefix: {
       type: String,
       default() {
-        return this.$options.name;
+        return this.$options.name && this.$options.name.toLowerCase();
       }
     }
   },
