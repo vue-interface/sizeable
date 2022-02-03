@@ -1,6 +1,6 @@
 {
   "name": "@vue-interface/sizeable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The sizeable mixin.",
   "files": [
     "dist"
