@@ -78,7 +78,7 @@ var Sizeable = {
   },
   computed: {
     sizeableClassPrefix() {
-      return this.sizePrefix && paramCase(this.sizePrefix.toLowerCase());
+      return this.sizePrefix && paramCase(this.sizePrefix);
     },
     sizeableClass() {
       if (!this.size || !this.sizeableClassPrefix) {

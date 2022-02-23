@@ -28,7 +28,7 @@ export default {
     computed: {
 
         sizeableClassPrefix() {
-            return this.sizePrefix && paramCase(this.sizePrefix.toLowerCase());
+            return this.sizePrefix && paramCase(this.sizePrefix);
         },
 
         sizeableClass() {
