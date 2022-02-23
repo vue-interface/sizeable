@@ -1,3 +1,5 @@
+import { paramCase } from "param-case";
+
 export default {
 
     props: {
@@ -17,7 +19,7 @@ export default {
         sizePrefix: {
             type: String,
             default() {
-                return this.$options.name && this.$options.name.toLowerCase();
+                return this.$options.name;
             }
         }
 
@@ -26,7 +28,7 @@ export default {
     computed: {
 
         sizeableClassPrefix() {
-            return this.sizePrefix;
+            return this.sizePrefix && paramCase(this.sizePrefix.toLowerCase());
         },
 
         sizeableClass() {
