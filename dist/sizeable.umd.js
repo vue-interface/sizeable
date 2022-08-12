@@ -1,14 +1,1 @@
-(function(n,t){typeof exports=="object"&&typeof module!="undefined"?t(exports):typeof define=="function"&&define.amd?define(["exports"],t):(n=typeof globalThis!="undefined"?globalThis:n||self,t(n.Sizeable={}))})(this,function(n){"use strict";/*! *****************************************************************************
-    Copyright (c) Microsoft Corporation.
-
-    Permission to use, copy, modify, and/or distribute this software for any
-    purpose with or without fee is hereby granted.
-
-    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-    PERFORMANCE OF THIS SOFTWARE.
-    ***************************************************************************** */var t=function(){return t=Object.assign||function(e){for(var r,a=1,s=arguments.length;a<s;a++){r=arguments[a];for(var f in r)Object.prototype.hasOwnProperty.call(r,f)&&(e[f]=r[f])}return e},t.apply(this,arguments)};function p(i){return i.toLowerCase()}var h=[/([a-z0-9])([A-Z])/g,/([A-Z])([A-Z][a-z])/g],v=/[^A-Z0-9]+/gi;function m(i,e){e===void 0&&(e={});for(var r=e.splitRegexp,a=r===void 0?h:r,s=e.stripRegexp,f=s===void 0?v:s,c=e.transform,x=c===void 0?p:c,g=e.delimiter,P=g===void 0?" ":g,l=o(o(i,a,"$1\0$2"),f,"\0"),u=0,d=l.length;l.charAt(u)==="\0";)u++;for(;l.charAt(d-1)==="\0";)d--;return l.slice(u,d).split("\0").map(x).join(P)}function o(i,e,r){return e instanceof RegExp?i.replace(e,r):e.reduce(function(a,s){return a.replace(s,r)},i)}function z(i,e){return e===void 0&&(e={}),m(i,t({delimiter:"."},e))}function _(i,e){return e===void 0&&(e={}),z(i,t({delimiter:"-"},e))}var b={props:{size:String,sizePrefix:{type:String,default(){return this.$options.name}}},computed:{sizeableClassPrefix(){return this.sizePrefix&&_(this.sizePrefix)},sizeableClass(){return!this.size||!this.sizeableClassPrefix?"":`${this.sizeableClassPrefix}-${this.size}`}}};n.Sizeable=b,Object.defineProperty(n,"__esModule",{value:!0}),n[Symbol.toStringTag]="Module"});
+(function(e,i){typeof exports=="object"&&typeof module<"u"?i(exports):typeof define=="function"&&define.amd?define(["exports"],i):(e=typeof globalThis<"u"?globalThis:e||self,i(e.Sizeable={}))})(this,function(e){"use strict";const i={props:{componentPrefix:String,size:String,sizePrefix:String},computed:{sizeableClassPrefix(){return this.sizePrefix||this.componentPrefix},hasSizeablePrefix(){return this.size&&!!this.size.match(new RegExp(`^${this.sizeableClassPrefix}`))},sizeableClass(){return this.size?!this.sizeableClassPrefix||this.hasSizeablePrefix?this.size:`${this.sizeableClassPrefix}-${this.size}`:""}}};e.Sizeable=i,Object.defineProperties(e,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});
