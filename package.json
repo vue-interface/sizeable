@@ -5,11 +5,18 @@
   "files": [
     "index.js",
     "dist",
-    "src",
     "tailwindcss"
   ],
   "main": "./dist/sizeable.umd.js",
-  "module": "./index.js",
+  "module": "./dist/sizeable.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/btn.es.js",
+      "require": "./dist/btn.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tailwindcss/safelist": "./tailwindcss/safelist.js"
+  },
   "browserslist": "last 2 versions, > 0.5%, ie >= 11",
   "scripts": {
     "dev": "vite",
@@ -42,18 +49,19 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-babel": "^6.0.2",
     "@vitejs/plugin-vue": "^3.0.1",
     "autoprefixer": "^10.4.2",
     "babel-eslint": "^10.1.0",
     "babel-preset-vue": "^2.0.2",
     "change-case": "^4.1.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^8.27.0",
+    "eslint-plugin-vue": "^9.7.0",
     "pascalcase": "^2.0.0",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.18",
     "vite": "^3.0.0",
+    "vite-plugin-dts": "^1.7.1",
     "vue": "^3.2.37"
   }
 }

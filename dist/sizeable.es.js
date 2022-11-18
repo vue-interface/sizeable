@@ -9,7 +9,7 @@ const e = {
       return this.sizePrefix || this.componentPrefix;
     },
     hasSizeablePrefix() {
-      return this.size && !!this.size.match(
+      return this.size === void 0 ? !1 : !!this.size.match(
         new RegExp(`^${this.sizeableClassPrefix}`)
       );
     },
