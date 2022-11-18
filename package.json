@@ -9,10 +9,11 @@
   ],
   "main": "./dist/sizeable.umd.js",
   "module": "./dist/sizeable.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/btn.es.js",
-      "require": "./dist/btn.umd.js",
+      "import": "./dist/sizeable.es.js",
+      "require": "./dist/sizeable.umd.js",
       "types": "./dist/index.d.ts"
     },
     "./tailwindcss/safelist": "./tailwindcss/safelist.js"
