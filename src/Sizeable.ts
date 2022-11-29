@@ -1,26 +1,36 @@
-<script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
 
     props: {
 
         /**
          * The generic component prefix.
          */
-        componentPrefix: String,
+        componentPrefix: {
+            type: String,
+            default: undefined
+        },
 
         /**
          * The size name.
          */
-        size: String,
+        size: {
+            type: String,
+            default: undefined
+        },
 
         /**
          * The sizable prefix. Should use to component prefix, unless the
          * sizeable prefix is different than the component prefix.
          */
-        sizePrefix: String
+        sizePrefix: {
+            type: String,
+            default: undefined
+        }
 
     },
-
+    
     computed: {
 
         /**
@@ -64,5 +74,4 @@ export default {
 
     }
 
-};
-</script>
+});

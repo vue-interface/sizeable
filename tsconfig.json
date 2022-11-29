@@ -17,4 +17,3 @@
         "types": ["node", "vite/client", "vue", "vue/ref-macros"]
     }
 }
-  

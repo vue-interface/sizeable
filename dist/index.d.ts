@@ -1,2 +1,2 @@
-import Sizeable from './src/Sizeable.vue';
+import Sizeable from './src/Sizeable';
 export { Sizeable };

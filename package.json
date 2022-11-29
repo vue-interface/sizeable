@@ -1,22 +1,22 @@
 {
   "name": "@vue-interface/sizeable",
   "version": "2.0.0-beta.3",
-  "description": "The sizeable mixin for interface components.",
+  "description": "A Vue size mixin.",
   "files": [
-    "index.js",
     "dist",
     "tailwindcss"
   ],
-  "main": "./dist/sizeable.umd.js",
+  "type": "module",
+  "main": "./dist/sizeable.umd.cjs",
   "module": "./dist/sizeable.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/sizeable.es.js",
+      "import": "./dist/sizeable.js",
       "require": "./dist/sizeable.umd.js",
       "types": "./dist/index.d.ts"
     },
-    "./tailwindcss/safelist": "./tailwindcss/safelist.js"
+    "./tailwindcss/safelist": "./tailwindcss/safelist.ts"
   },
   "browserslist": "last 2 versions, > 0.5%, ie >= 11",
   "scripts": {
@@ -45,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/vue-interface/sizeable/issues"
   },
-  "homepage": "https://github.com/vue-interface/sizeable/docs#readme",
+  "homepage": "https://github.com/vue-interface/sizeable",
   "peerDependencies": {
     "vue": "^3.0.0"
   },

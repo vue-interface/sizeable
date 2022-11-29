@@ -12,7 +12,7 @@
             <h3 class="text-2xl">Text Size</h3>
 
             <txt size="text-xs" class="p-3">xs</txt>
-            <txt size="sm xl:text-3xl" class="p-3">sm</txt>
+            <txt size="sm" class="p-3">sm</txt>
             <txt size="tiny" class="p-3">tiny</txt>
             <txt size="base" class="p-3">base</txt>
             <txt size="lg" class="p-3">lg</txt>
@@ -28,7 +28,7 @@
         <script type="module">
             import './index.css';
             import { createApp, h } from 'vue/dist/vue.esm-bundler.js';
-            import { Sizeable } from './index.js';
+            import { Sizeable } from './index.ts';
             
             const Txt = h({
                 props: {
