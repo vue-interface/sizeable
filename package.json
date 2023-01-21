@@ -8,12 +8,12 @@
   ],
   "type": "module",
   "main": "./dist/sizeable.umd.js",
-  "module": "./dist/sizeable.es.js",
+  "module": "./dist/sizeable.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/sizeable.es.js",
-      "require": "./dist/sizeable.umd.js",
+      "require": "./dist/sizeable.js",
       "types": "./dist/index.d.ts"
     },
     "./tailwindcss/safelist": "./tailwindcss/safelist.js"
