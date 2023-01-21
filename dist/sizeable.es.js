@@ -1,4 +1,5 @@
-const e = {
+import { defineComponent as e } from "vue";
+const s = e({
   props: {
     componentPrefix: String,
     size: String,
@@ -17,7 +18,7 @@ const e = {
       return this.size ? !this.sizeableClassPrefix || this.hasSizeablePrefix ? this.size : `${this.sizeableClassPrefix}-${this.size}` : "";
     }
   }
-};
+});
 export {
-  e as Sizeable
+  s as Sizeable
 };
