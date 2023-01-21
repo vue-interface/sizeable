@@ -1,22 +1,16 @@
 # Sizeable
 
-A mixin that adds the size class to the component.
-
-[[toc]]
+A Vue mixin that adds the size class to the component.
 
 ## Installation
 
 NPM
 
-    npm i <%= pkg.name %> --save
+    npm i @vue-interface/sizeable
 
 Yarn
 
     yard add <%= pkg.name %>
-
-CDN
-
-    https://cdn.jsdelivr.net/npm/<%= pkg.name %>@<%= pkg.version %>/dist/ActivityIndicator.min.js
 
 ## Props
 

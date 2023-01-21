@@ -1,5 +1,3 @@
-const safelist = require('./tailwindcss/safelist');
-
 module.exports = {
     content: [
         "./index.html",
@@ -8,10 +6,7 @@ module.exports = {
     theme: {
         extend: {},
     },
-    safelist: safelist({
-        'text': [
-            'xs', 'sm', 'tiny', 'base', 'lg', 'xl',
-            '2xl', '3xl', '4xl', '5xl', '6xl', '7xl'
-        ]
-    })
+    safelist: [
+        ...require('./tailwindcss/safelist.js')
+    ]
 };
